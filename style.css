@@ -1,0 +1,99 @@
+/* Reset margin dan padding bawaan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Latar belakang dengan animasi gradient */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #2ebf91 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Keyframes untuk animasi latar belakang */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Styling untuk kotak pengumuman (Card) */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover pada kotak pengumuman */
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi ikon */
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* Typography */
+h1 {
+    margin-bottom: 15px;
+    color: #1a202c;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Styling tombol/tautan */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+}
+
+/* Efek hover pada tombol */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(66, 153, 225, 0.6);
+    background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+}
+
+/* Efek saat tombol diklik */
+.btn:active {
+    transform: scale(0.95);
+}
